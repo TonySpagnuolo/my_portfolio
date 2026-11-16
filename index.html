@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Design Threads</title>
+    <title>Tony Spagnuolo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦖</text></svg>">
 
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -11,80 +12,325 @@
 <body>
 
     <section class="hero">
-        <h1>Tony Spagnuolo</h1>
+    <h1>Tony Spagnuolo</h1>
 
-        <div class="subtitle">
-            SOMETHING HERE<br>
-            ABOUT MY PORTFOLIO NOT<br>
-            WHAT TO PUT YET
-        </div>
+    <div class="subtitle">
+        <a href="https://github.com/tonyspagnuolo" target="_blank" rel="noopener">GitHub</a><br>
+        <a href="https://www.linkedin.com/in/tony-spagnuolo" target="_blank" rel="noopener">LinkedIn</a><br>
+        <a href="TonySpagnuoloResume.pdf" target="_blank" rel="noopener">Resume</a><br>
+    
+    </div>
 
-        <div class="definition">
-            <p class="label">THREAD (NOUN)</p>
-
+        <div class="about-me">
+            <p class="label">ABSTRACT</p>
             <p>
-                1. ABOUT ME SECTION
-            </p>
-
-            <p>
-                2. EXPERIENCE SECTION
+                Hi, I'm Tony. I'm a computer science
+                student at University of Florida and I am
+                interested engineering software that solves
+                problems with clean code. 
+                If you would like to know more about me, please click
+                on the links below.
             </p>
         </div>
 
-        <div class="scroll-indicator">
-            CONTINUE SCROLL ↓
-        </div>
+        <section class="sections">
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    About Me
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        I'm a CT tech by trade currently working at a stand-alone ER. I'm also a computer science student in my senior year at UF.
+                        I would like to continue working in the healthcare industry in software development. Specific areas of interests are machine 
+                        learning for image segmentation, EMR optimization, and improving workflow with software solutions that simplify workflows and 
+                        integrate comprehensive patient data. 
+                    </p>
+                    <p>
+                        In my spare time I enjoy golfing, surfing and fly fishing. I like getting outside and being active. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Education
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Bachelor's in Computer Science | Class of 2027 | University of Florida</li>
+                        <li>A.S. Radiography | May 2017 | Northwest Florida State College</li>
+                        <li>A.A. General Education | May 2023 | Northwest Florida State College</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Projects
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        <a href="https://tonyspagnuolo.github.io/eigenvalue_calculator/" target="_blank" rel="noopener">Eigenvalue Calculator</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Photography
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>Your content goes here.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Top 10 Lists
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><button class="list-link" data-target="list-movies">Movies</button></li>
+                        <li><button class="list-link" data-target="list-movies-2">Movies 2</button></li>
+                        <li><button class="list-link" data-target="list-books">Books</button></li>
+                        <li><button class="list-link" data-target="list-albums">Albums</button></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
     </section>
 
+    <section class="list-view" id="list-movies" aria-hidden="true">
+    <button class="list-close">← Back</button>
 
-    <section class="sections">
+    <header class="list-header">
+        <p class="label">TOP 10 LIST</p>
+        <h2>Movies</h2>
+        <p class="list-description">
+        A list of my favorite movies, in no particular order. These are movies that I 
+        could watch over and over. Many of these I watched for the fisrt time when I was 
+        very young. 
+        </p>
+    </header>
 
-    <div class="accordion-item">
-        <button class="accordion-header">
-            About Me
-            <span class="icon">+</span>
-        </button>
-        <div class="accordion-content">
-            <p>
-                I’m a designer and developer interested in systems, research,
-                and the intersection of digital structure and human behavior.
-                This space will evolve as I document projects, thinking,
-                and experiments.
-            </p>
-        </div>
-    </div>
+    <ol class="list-items">
+        <li>
+            <span class="title">Batman</span>
+            <span class="meta">Tim Burton, 1989</span>
+        </li>
+        <li>
+            <span class="title">Jurassic Park</span>
+            <span class="meta">Steven Spielberg, 1993</span>
+        </li>
+        <li>
+            <span class="title">I Vitelloni</span>
+            <span class="meta">Federico Fellini, 1953</span>
+        </li>
+        <li>
+            <span class="title">Halloween</span>
+            <span class="meta">John Carpenter, 1978</span>
+        </li>
+        <li>
+            <span class="title">Alien</span>
+            <span class="meta">Ridley Scott, 1979</span>
+        </li>
+        <li>
+            <span class="title">The Good, the Bad, the Ugly</span>
+            <span class="meta">Sergio Leone, 1967</span>
+        </li>
+        <li>
+            <span class="title">J.S.A</span>
+            <span class="meta">Kim Sung-Bok, 20000</span>
+        </li>
+        <li>
+            <span class="title">Hot Fuzz</span>
+            <span class="meta">Edgar Wright, 2007</span>
+        </li>
+        <li>
+            <span class="title">Bright Future</span>
+            <span class="meta">Kiyoshi Kurosawa, 2003</span>
+        </li>
+        <li>
+            <span class="title">The Empire Stikes Back</span>
+            <span class="meta">Irvin Kershner, 1980</span>
+        </li>
+    </ol>
+    </section>
 
-    <div class="accordion-item">
-        <button class="accordion-header">
-            Education
-            <span class="icon">+</span>
-        </button>
-        <div class="accordion-content">
-            <p>Your content goes here.</p>
-        </div>
-    </div>
+    <section class="list-view" id="list-movies-2" aria-hidden="true">
+    <button class="list-close">← Back</button>
 
-    <div class="accordion-item">
-        <button class="accordion-header">
-            Projects
-            <span class="icon">+</span>
-        </button>
-        <div class="accordion-content">
-            <p>Your content goes here.</p>
-        </div>
-    </div>
+    <header class="list-header">
+        <p class="label">TOP 10 LIST</p>
+        <h2>Movies-2</h2>
+        <p class="list-description">
+        I cheated and added a second Movies list. This list comprises some of the most impressive 
+        movies I've seen thematically and cinematically. I don't know if I could call these my "Favorite" movies, however,
+        because, like, I'm not really trying to watch <em>Come and See</em> on a daily basis or anything.
+        </p>
+    </header>
 
-    <div class="accordion-item">
-        <button class="accordion-header">
-            Photography
-            <span class="icon">+</span>
-        </button>
-        <div class="accordion-content">
-            <p>Your content goes here.</p>
-        </div>
-    </div>
+    <ol class="list-items">
+        <li>
+            <span class="title">Dead Ringers</span>
+            <span class="meta">David Cronenberg, 1988</span>
+        </li>
+        <li>
+            <span class="title">Come and See</span>
+            <span class="meta">Elem Klimov, 1987</span>
+        </li>
+         <li>
+            <span class="title">Stalker</span>
+            <span class="meta">Andrei Tarkovsky, 1982</span>
+        </li>
+         <li>
+            <span class="title">The Florida Project</span>
+            <span class="meta">Sean Baker, 2017</span>
+        </li>
+         <li>
+            <span class="title">The Last Detail</span>
+            <span class="meta">Hal Ashby, 1973</span>
+        </li>
+         <li>
+            <span class="title">Theif</span>
+            <span class="meta">Michael Mann, 1981</span>
+        </li>
+         <li>
+            <span class="title">Them</span>
+            <span class="meta">Xavier Palud, David Moreau, 2007</span>
+        </li>
+         <li>
+            <span class="title">Funny Games</span>
+            <span class="meta">Michael Haneke, 1998</span>
+        </li>
+         <li>
+            <span class="title">Starship Troopers</span>
+            <span class="meta">Paul Verhoven, 1997</span>
+        </li>
+         <li>
+            <span class="title">Battle for Algiers</span>
+            <span class="meta">Gillo Pontecorvo, 1967</span>
+        </li>
+    </ol>
+    </section>
 
-</section>
+    <section class="list-view" id="list-books" aria-hidden="true">
+    <button class="list-close">← Back</button>
+
+    <header class="list-header">
+        <p class="label">TOP 10 LIST</p>
+        <h2>Books</h2>
+        <p class="list-description">
+        I just stuck with fiction here and tried not to repeat 
+        any authors. 
+        </p>
+    </header>
+
+    <ol class="list-items">
+         <li>
+            <span class="title">Libra</span>
+            <span class="meta">Don DeLillo, 1988</span>
+        </li>
+         <li>
+            <span class="title">LOTR (triligy + The Hobbit)</span>
+            <span class="meta">J.R.R Tolkien, 1937</span>
+        </li>
+         <li>
+            <span class="title">Dog of the South</span>
+            <span class="meta">Charles Ports, 1979</span>
+        </li>
+         <li>
+            <span class="title">No Country for Old Men</span>
+            <span class="meta">Cormac McCarthy, 2005</span>
+        </li>
+         <li>
+            <span class="title">Wolf Hall (trilogy)</span>
+            <span class="meta">Hilary Mantel, 2009</span>
+        </li>
+         <li>
+            <span class="title">Carrion Comfort</span>
+            <span class="meta">Dan Simmons, 1989</span>
+        </li>
+         <li>
+            <span class="title">A Farewell to Arms</span>
+            <span class="meta">Ernest Hemingway, 1929</span>
+        </li>
+         <li>
+            <span class="title">Dune</span>
+            <span class="meta">Frank Herbert, 1965</span>
+        </li>
+        <li>Dune</li>
+         <li>
+            <span class="title">Moby Dick</span>
+            <span class="meta">Herman Melville, 1851</span>
+        </li>
+        
+    </ol>
+    </section>
+
+    <section class="list-view" id="list-albums" aria-hidden="true">
+    <button class="list-close">← Back</button>
+
+    <header class="list-header">
+        <p class="label">TOP 10 LIST</p>
+        <h2>Albums</h2>
+        <p class="list-description">
+        This list was hard becuase I tried to limit this to "no skip" albums,  
+        and some of my favorite bands did not make the list. 
+        </p>
+    </header>
+
+    <ol class="list-items">
+          <li>
+            <span class="title">Synchronicity</span>
+            <span class="meta">The Police, 1983</span>
+        </li>
+         <li>
+            <span class="title">River: The Joni Letters</span>
+            <span class="meta">Herbie Hanckock, 2007</span>
+        </li>
+         <li>
+            <span class="title">After the Rain</span>
+            <span class="meta">Muddy Waters, 1969</span>
+        </li>
+         <li>
+            <span class="title">Sofware</span>
+            <span class="meta">Patrick Holland, 2019</span>
+        </li>
+         <li>
+            <span class="title">In Rainbows</span>
+            <span class="meta">Radiohead, 2007</span>
+        </li>
+         <li>
+            <span class="title">Sleeps with Angles</span>
+            <span class="meta">Neil Young, 1994</span>
+        </li>
+         <li>
+            <span class="title">Highwayman</span>
+            <span class="meta">The Highwaymen, 1985</span>
+        </li>
+        <li>
+            <span class="title">Love Delux</span>
+            <span class="meta">Sade, 1992</span>
+        </li>
+         <li>
+            <span class="title">Bitches Brew</span>
+            <span class="meta">Miles Davis, 1970</span>
+        </li>
+         <li>
+            <span class="title">In the Wee Small Hours</span>
+            <span class="meta">Frank Sinatra, 1955</span>
+        </li>
+    </ol>
+    </section>
+
 
 <script src="script.js"></script>
 

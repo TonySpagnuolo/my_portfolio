@@ -22,3 +22,35 @@ items.forEach(item => {
         }
     });
 });
+
+(function () {
+    const listLinks = document.querySelectorAll(".list-link");
+    const listViews = document.querySelectorAll(".list-view");
+
+    function openList(id) {
+        const view = document.getElementById(id);
+        if (!view) return;
+        view.scrollTop = 0;
+        view.classList.add("open");
+        view.setAttribute("aria-hidden", "false");
+    }
+
+    function closeLists() {
+        listViews.forEach(view => {
+            view.classList.remove("open");
+            view.setAttribute("aria-hidden", "true");
+        });
+    }
+
+    listLinks.forEach(link => {
+        link.addEventListener("click", () => openList(link.dataset.target));
+    });
+
+    document.querySelectorAll(".list-close").forEach(btn => {
+        btn.addEventListener("click", closeLists);
+    });
+
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape") closeLists();
+    });
+})();

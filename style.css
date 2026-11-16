@@ -13,44 +13,42 @@ body {
 
 /* HERO SECTION */
 
+
 .hero {
-    padding: 80px 60px;
+    padding: 40px 60px;
     min-height: 100vh;
+    min-height: 100dvh; /* better on mobile browsers with collapsing address bars */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 h1 {
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 60px;
+    margin-bottom: 24px;
+    flex-shrink: 0;
 }
 
 .subtitle {
-    font-size: 24px;
-    line-height: 1.5;
-    margin-bottom: 80px;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    flex-shrink: 0;
 }
 
-.definition {
-    max-width: 520px;
-    font-size: 18px;
+.about-me {
+    max-width: 560px;
+    font-size: 15px;
     line-height: 1.5;
+    margin-bottom: 24px;
+    flex-shrink: 0;
 }
 
 .label {
-    margin-bottom: 40px;
-}
-
-.definition p {
-    margin-bottom: 40px;
-}
-
-.scroll-indicator {
-    font-size: 14px;
+    margin-bottom: 12px;
+    font-size: 13px;
     opacity: 0.7;
-    margin-top: 60px;
 }
 
 
@@ -58,6 +56,7 @@ h1 {
 
 .sections {
     border-top: 1px dashed rgba(0,0,0,0.3);
+    margin-top: auto;
 }
 
 .accordion-item {
@@ -68,9 +67,9 @@ h1 {
     width: 100%;
     background: none;
     border: none;
-    padding: 40px 60px;
+    padding: 20px 0;
     font-family: inherit;
-    font-size: 22px;
+    font-size: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +81,7 @@ h1 {
 }
 
 .icon {
-    font-size: 26px;
+    font-size: 22px;
     transition: transform 0.3s ease;
 }
 
@@ -94,11 +93,150 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    padding: 0 60px;
 }
 
 .accordion-content p {
-    padding: 0 0 40px 0;
-    font-size: 18px;
+    padding: 0 0 20px 0;
+    font-size: 15px;
     line-height: 1.5;
+}
+
+.accordion-content ul {
+    list-style: none;
+    padding: 0 0 20px 0;
+}
+
+.accordion-content li {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.accordion-content p {
+    margin-bottom: 16px;
+}
+
+.accordion-content p:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-content a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.accordion-content a:hover {
+    opacity: 0.7;
+}
+
+.list-link {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 15px;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.list-link:hover {
+    opacity: 0.7;
+}
+
+/* Full-screen list panel: black with white text, smoother wipe */
+.list-view {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: #000;
+    color: #fff;
+    padding: 40px 60px;
+    overflow-y: auto;
+    visibility: hidden;
+    clip-path: inset(100% 0 0 0);
+    will-change: clip-path;
+    transition: clip-path 0.9s cubic-bezier(0.76, 0, 0.24, 1),
+                visibility 0s linear 0.9s;
+}
+
+.list-view.open {
+    visibility: visible;
+    clip-path: inset(0);
+    transition: clip-path 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Content fades and rises in after the wipe is underway */
+.list-view > * {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.list-view.open > * {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s;
+}
+
+/* The header divider was dark-on-light, so flip it */
+.list-header {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.list-close {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 15px;
+    color: inherit;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.list-close:hover {
+    opacity: 0.7;
+}
+
+.list-header {
+    border-bottom: 1px dashed rgba(0,0,0,0.3);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.list-header h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.list-items {
+    max-width: 560px;
+    padding-left: 2em; /* your * reset removes the default, so numbers need this */
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.subtitle a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.subtitle a:hover {
+    opacity: 0.7;
+}
+
+.list-items li {
+    margin-bottom: 14px;
+}
+
+.list-items .title {
+    display: block;
+}
+
+.list-items .meta {
+    display: block;
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0.6;
 }
